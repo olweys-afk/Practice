@@ -10,10 +10,11 @@ text=""
 
 while text != "q":
 
-    print("\n Employee Directory \n")
+    print("\n ------Employee Directory------ \n")
 
-    print("Enter 'f' to find, 'a' to add, 'd' to delete,'l' to load, 's' to save, 'q' to quit")
-    text = input("Enter Option:")
+    print("Enter 'f' to find, 'a' to add, 'd' to delete,'c' to check all directory")
+    print("      'l' to load, 's' to save, 'q' to quit")
+    text = input("Enter Selection:")
 
     if text == "f":
         name = input("Enter Name:")
@@ -35,6 +36,12 @@ while text != "q":
             print("Employee has been deleted")
         else:
             print("Not Found")
+
+    elif text == "c":
+        for name,number in employees.items():
+            print(name,number)
+
+
 
     elif text == 'l':
         file_name = input("Enter FileName:")
